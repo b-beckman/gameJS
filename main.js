@@ -66,9 +66,9 @@ animationStates.forEach((state, index) => {
 console.log(spriteAnimations);
 function animate(){
     ctx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
-    let position = Math.floor(gameFrame/staggerFrames) % spriteAnimations["run"].loc.length;
+    let position = Math.floor(gameFrame/staggerFrames) % spriteAnimations["sit"].loc.length;
     let frameX = spriteWidth * position;
-    let frameY = spriteAnimations["run"].loc[position].y;
+    let frameY = spriteAnimations["sit"].loc[position].y;
     ctx.drawImage(playerImage, frameX, frameY, spriteWidth, spriteHeight, 0, 0, spriteWidth, spriteHeight)
 
 
